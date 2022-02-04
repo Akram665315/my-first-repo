@@ -6,8 +6,23 @@
 
 <body>
 
-    <h1> This is a random app</h1>
-    <h2>I'm making this to test out my git and gitHub skills</h2>
+    <script>
+
+        let balance = 0
+
+        function checkBalance() {
+            console.log("Current Balance is: ", balance);
+        }
+
+        function deposit(amount) {
+            balance = amount + balance
+        }
+
+        function withdraw(amount) {
+            balance = amount - balance
+        }
+
+    </script>
 
 </body>
 
