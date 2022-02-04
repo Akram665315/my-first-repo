@@ -2,25 +2,62 @@
 <html lang="en">
 
 <head>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
 
+    <h1> ATM Machine </h1>
+
+    <br><br>
+
+    <Label>Check Balance: </Label>
+    <input type="text" class="myInput">
+
+    <br><br>
+
+    <button class="checkBtn">Check balance</button>
+
+    <br><br>
+
+    <button class="depositBtn">Deposit</button>
+    <button class="withdrawBtn">Withdraw </button>
+
     <script>
 
-        let balance = 0
+        let balance = 0;
+
+        let amount = document.querySelector(".myInput").value;
+
+        let checkB = document.querySelector(".checkBtn");
+        let depositA = document.querySelector(".depositBtn")
+        let withdrawA = document.querySelector(".withdrawBtn")
 
         function checkBalance() {
-            console.log("Current Balance is: ", balance);
+            console.log(balance);
+        }
+        function deposit() {
+            balance = balance + amount
+        }
+        function withdraw() {
+            balance = balance - amount
         }
 
-        function deposit(amount) {
-            balance = amount + balance
-        }
+        checkBtn.addEventListener("click", checkB)
+        depositBtn.addEventListener("click", deposit)
+        withdrawBtn.addEventListener("click", withdraw)
 
-        function withdraw(amount) {
-            balance = amount - balance
-        }
+
+
+
+
+
 
     </script>
 
